@@ -4,9 +4,6 @@
 
 ### By: Ifeoluwa adebisi | [LinkedIn](https://www.linkedin.com/in/ifeoluwa-adebisi-b6a9911b7/) | [Github](https://github.com/SEIfeoluwa)
 
-***
-
-![Something](placeholder)
 
 ***
 
@@ -15,7 +12,9 @@
 
 This application called Ctrl Center/CC is an application built for the new home environments with which technology is infused. The app will allow one to connect the technological devices in their home through the app and remotely control said devices directly from their phone. The 
 
+![Frontend Heirarchy](https://s8.gifyu.com/images/Screenshot-from-2022-05-05-13-19-03.png)
 
+![ERD](https://s8.gifyu.com/images/Screenshot-from-2022-05-05-13-21-32.png)
 
 ***
 
