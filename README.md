@@ -33,7 +33,7 @@ Or React and Django
 
 - npm start in backend server before npm start frontend
 
-- [Trello Board](placeholder)
+- [Trello Board](https://trello.com/b/qNAdTm3c/cc-timeline)
 
 ***
 ### [***Component Heirarchy***](https://drive.google.com/file/d/1m-EQDRjwmTLbI0Xdv99b72rAcIr4rLjE/view?ts=62588081)
