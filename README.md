@@ -38,13 +38,11 @@ Or React and Django
 
 ***
 ### [***Component Heirarchy***](https://drive.google.com/file/d/1m-EQDRjwmTLbI0Xdv99b72rAcIr4rLjE/view?ts=62588081)
-![diagram](https://s7.gifyu.com/images/Screenshot-from-2022-04-15-09-38-35.png)
+![diagram](placeholder)
 
 
 ### ***Future Updates***
-    [] Create user auth for Students
-    [] Seperate posts by hashtags to be filtered in the search bar.
-    [] Create backend routes for Weekly Goals
+    
 
 ### ***Credits:***
 
