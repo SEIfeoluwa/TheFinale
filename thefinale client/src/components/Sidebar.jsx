@@ -20,14 +20,14 @@ const Sidebar = ({ authenticated,teacher, handleLogout }) => {
             <li className="item doc"><Link to="/login"><i className="fa-solid fa-arrow-right-to-bracket"></i><span>Login</span></Link></li>
             <li className="item doc"><Link to="/learn"><i class="fa-solid fa-file-circle-info"></i><span>Partners</span></Link></li>
             <li className="item doc"><Link to="/partners"><i class="fa-solid fa-buildings"></i><span>Partners</span></Link></li>
-        </ul>
+        </ul>   
     )
 
     return (
         <div>
             <div>
                 {authenticated && teacher ? authenticatedOptions : publicOptions}
-            </div>
+            </div>cd <div className=""></div>
         </div>
     )
 }
