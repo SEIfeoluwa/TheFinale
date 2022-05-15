@@ -1,13 +1,20 @@
 from django.db import models
+from django.utils import timezone
+from django.contrib.auth.models import AbstractBaseUser
+
 
 # Create your models here.
-class User(models.Model):
+class User(AbstractBaseUser):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
-    username = models.CharField(max_length=100)
-    email = models.CharField(max_length=100)
+    username = models.CharField(max_length=100, unique=True)
+    email = models.EmailField(('email address'), unique=True)
     address = models.CharField(max_length=100)
     photo_url = models.TextField()
+    start_date = models.DateTimeField(default=timezone.now)
+
+    USERNAME_FIELD = 'username'
+    REQUIRED_FIELDS = ['email', 'first_name']
 
     def __str__(self):
         return self.username
@@ -26,7 +33,7 @@ class Device(models.Model):
     company = models.ForeignKey(Company, on_delete=models.CASCADE, related_name='devices', default='Not a partner company')
     name = models.CharField(max_length=100, default='None')
     label = models.CharField(max_length=100, default='None')
-    features = models.CharField(max_length=200, default='None')
+    features = models.TextField(max_length=200, default='None')
     description = models.CharField(max_length=200, default='None')
     company = models.CharField(max_length=100, default='None')
     location = models.CharField(max_length=100, default='None')

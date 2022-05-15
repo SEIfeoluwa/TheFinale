@@ -59,6 +59,9 @@ CORS_ORIGIN_WHITELIST = (
     'http://localhost:8080',
 )
 
+# Custom user model
+AUTH_USER_MODEL = "cc.User"
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
