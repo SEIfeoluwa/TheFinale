@@ -30,7 +30,7 @@ class Company(models.Model):
 
 class Device(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='devices')
-    company = models.ForeignKey(Company, on_delete=models.CASCADE, related_name='devices', default='Not a partner company')
+    company = models.ForeignKey(Company, on_delete=models.CASCADE, related_name='devices')
     name = models.CharField(max_length=100, default='None')
     label = models.CharField(max_length=100, default='None')
     features = models.TextField(max_length=200, default='None')
