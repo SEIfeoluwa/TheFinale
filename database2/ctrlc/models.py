@@ -3,53 +3,21 @@ from django.db import models
 # Create your models here.
 from django.db import models
 from django.utils import timezone
-from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
-
-
-class CustomAccountManager(BaseUserManager):
-
-    def create_superuser(self, email, username, first_name, password, **other_fields):
-   
-        other_fields.setdefault('is_staff', True)
-        other_fields.setdefault('is_superuser', True)       
-
-        if other_fields.get('is_staff') is not True:
-            raise ValueError(
-                'Superuser must be assigned to is_staff=True.')
-        if other_fields.get('is_superuser') is not True:
-            raise ValueError(
-                'Superuser must be assigned to is_superuser=True.')
-
-    def create_user(self, email, username, first_name, password, **other_fields):
-
-        if not email:
-            raise ValueError('You must provide an email address')
-        
-        email = self.normalize_email(email)
-        user = self.model(email=email, username=username,
-                           first_name=first_name, **other_fields)
-        user.set_password(password)
-        user.save()
-        return user
+from django.utils.translation import gettext_lazy as _
 
 
 # Create your models here.
-class User(AbstractBaseUser, PermissionsMixin):
+class User(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
-    username = models.CharField(max_length=100, unique=True)
-    email = models.EmailField(('email address'), unique=True)
+    user_name = models.CharField(max_length=100, unique=True)
+    email = models.EmailField(_('email address'), unique=True)
     address = models.CharField(max_length=100)
     photo_url = models.TextField()
     start_date = models.DateTimeField(default=timezone.now)
 
-    objects = CustomAccountManager()
-
-    USERNAME_FIELD = 'username'
-    REQUIRED_FIELDS = ['email', 'first_name']
-
     def __str__(self):
-        return self.username
+        return self.user_name
 
 class Company(models.Model):
     name = models.CharField(max_length=100, default='Not Specified')
