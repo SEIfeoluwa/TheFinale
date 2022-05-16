@@ -1,0 +1,10 @@
+pipenv shell
+pipenv install django
+pipenv install djangorestframework
+pipenv install psycopg2-binary
+pipenv run django-admin startproject ctrlc_django .
+django-admin startapp ctrlc
+touch settings.sql 
+psql -U ifeoluwa -f settings.sql
+
+python manage.py runserver
