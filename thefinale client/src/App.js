@@ -41,26 +41,12 @@ function App() {
 
   return (
     <div className="App">
-      <Sidebar
-        authenticated={authenticated}
-        owner={ owner }
-        handleLogout={handleLogOut}
-      />
       <main>
         <Routes>
           <Route path="/" element={ <Landing /> } />
           <Route path="/home" element={ <Home /> } />
-          <Route path="/login" element={ 
-            <Login 
-            setOwner={setOwner}
-            toggleAuthenticated={toggleAuthenticated}
-            /> 
-          } />
-          <Route path="/prof" element={ 
-            <Profile 
-            owner={owner}
-            /> 
-          } />
+          <Route path="/login" element={ <Login/> } />
+          <Route path="/prof" element={  <Profile /> } />
           <Route path="/register" element={ <Register /> } />
           <Route path="/devices" element={ <YDevices /> } />
           <Route path="/learnmore" element={ <Learn /> } />

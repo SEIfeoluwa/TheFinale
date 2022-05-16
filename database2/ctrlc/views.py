@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Company, User, Device
+from .forms import DeviceForm, UserForm
 
 # Create your views here.
 def user_list(request):
@@ -25,6 +26,26 @@ def device_detail(request, pk):
 def company_detail(request, pk):
     company = Company.objects.all(id=pk)
     return render(request, 'ctrlc/company_detail.html', {'company': company})
+
+def device_create(request):
+    if request.method == 'POST':
+        form = DeviceForm(request.POST)
+        if form.is_valid():
+            device = form.save()
+            return redirect('device_detail', pk=device.pk)
+    else:
+        form = DeviceForm()
+    return render(request, 'ctrlc/device_form.html', {'form': form})
+
+def device_edit(request):
+    if request.method == 'POST':
+        form = DeviceForm(request.POST)
+        if form.is_valid():
+            song = form.save()
+            return redirect('device_detail', pk=song.pk)
+    else:
+        form = DeviceForm()
+    return render(request, 'ctrlc/device_form.html', {'form': form})
 
 def user_delete(request, pk):
     User.objects.get(id=pk).delete()

@@ -10,7 +10,7 @@
 
 ### ***Description***
 
-This application called Ctrl Center/CC is an application built for the new home environments with which technology is infused. The app will allow one to connect the technological devices in their home through the app and remotely control said devices directly from their phone. The 
+This application called Ctrl Center/CtrlC is an application built for the new home environments with which technology is infused. The app will allow one to connect the technological devices in their home through the app and remotely control said devices directly from their phone. The inspiration for this application came from my desire to connect 
 
 ![Frontend Heirarchy](https://s8.gifyu.com/images/Screenshot-from-2022-05-05-13-19-03.png)
 
@@ -20,9 +20,7 @@ This application called Ctrl Center/CC is an application built for the new home 
 
 ### ***Techologies Used***
 
-![PERN](https://repository-images.githubusercontent.com/248812720/56902700-c5bd-11ea-813f-ed8631377258)
-
-Or React and Django
+React and Django
 
 ***
 
@@ -42,6 +40,7 @@ Or React and Django
 
 ### ***Future Updates***
     
+- Complete Material Ui
 
 ### ***Credits:***
 
