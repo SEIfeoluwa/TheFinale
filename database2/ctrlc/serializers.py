@@ -21,3 +21,8 @@ class DeviceSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Device
         fields = ('id', 'user', 'company', 'name', 'label', 'features', 'description', 'company', 'location',)
+
+class CompanySerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Company
+        fields = ('id', 'name', 'field', 'logo')
