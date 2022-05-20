@@ -4,10 +4,18 @@
         {{ user.username }}
     </a>
 </h2>
+
+<img src="{{ user.photo_url }}" alt="" class="user-photo">
+
+<a href="{% url 'user_delete' pk=user.pk %}">Delete</a>
+
+<h3>Users</h3>
 <ul>
-  {% for user in users %}
+  {% for device in user.devices.all %}
   <li>
-    
+    <a href="{% url 'device_detail' pk=song.pk %}">
+        {{ device.name }}
+    </a>
   </li>
   {% endfor %}
 </ul>
