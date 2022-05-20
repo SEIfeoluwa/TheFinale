@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .serializers import UserSerializer
+from .serializers import DeviceSerializer, UserSerializer, CompanySerializer
 from rest_framework import generics
 
 from .models import Company, User, Device
@@ -14,6 +14,18 @@ class UserDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
+class DeviceList(generics.ListCreateAPIView):
+    queryset = Device.objects.all()
+    serializer_class = DeviceSerializer
+
+class DeviceList(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Device.objects.all()
+    serializer_class = DeviceSerializer
+
+class CompanyList(generics.ListCreateAPIView):
+    queryset = Device.objects.all()
+    serializer_class = CompanySerializer
+    
 # Create your views here.
 def user_list(request):
     users = User.objects.all()
