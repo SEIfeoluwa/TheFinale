@@ -4,7 +4,7 @@ const Landing = () => {
 
     return (
         <div className="landing-container">
-            <div className='front'><img src='https://s7.gifyu.com/images/Screenshot-from-2022-04-01-12-42-25.png' /></div>
+            <div className='front'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Cc.logo.circle.svg/1200px-Cc.logo.circle.svg.png' alt='' /></div>
             <div className="link-wrapper centered1">
              <Link to="/register" className='item1'>Register</Link>   
              <Link to="/login" className='item1'>Login</Link> 

@@ -13,8 +13,8 @@ import axios from 'axios'
 
 function App() {
   const makeApiCall = async () => {
-    let res = await axios.get('http://localhost:8000/')
-    console.log(res)
+    let res = await axios.get('http://127.0.0.1:8000/')
+    console.log(res.data)
     // console.log(res.data.users)
   }
   makeApiCall();
