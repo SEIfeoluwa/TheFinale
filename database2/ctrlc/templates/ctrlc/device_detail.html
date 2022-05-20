@@ -1,6 +1,6 @@
 {% extends 'ctrlc/base.html' %} {% block content %}
 <h2>{{ device.name }} <a href="{% url 'device_edit' pk=device.pk %}"></a></h2>
-<h3>Company: {{ device.company.name }}</h3>
+<h3>Company: {{ device.company }}</h3>
 
 <a href="{% url 'device_delete' pk=device.pk %}"
 
