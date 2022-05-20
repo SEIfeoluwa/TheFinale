@@ -4,8 +4,8 @@ const Sidebar = ({ authenticated,teacher, handleLogout }) => {
     
 
     return (
-        <div>
-            <div>
+        <div className='header'>
+            <div className='side-nav'>
                 <ul className='nav-links'>
                     <li className="item doc"><Link to=""><i className="fa-solid fa-house"></i><span>Home</span></Link></li>
                     <li className="item doc"><Link to=""><i className="fa-solid fa-house"></i><span>Devices</span></Link></li>
