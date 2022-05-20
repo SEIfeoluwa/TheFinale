@@ -4,7 +4,7 @@
 
 <img src="{{ company.logo }}" alt="" class="company-logo">
 <ul>
-  {% for device in copmany.devices.all %}
+  {% for device in company.devices.all %}
   <li>
     <a href="{% url 'device_detail' pk=song.pk %}">
         {{ device.name }}

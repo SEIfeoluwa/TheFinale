@@ -1,7 +1,7 @@
 {% extends 'ctrlc/base.html' %} {% block content %}
-<h2>Partner Companies </h2>
+<h2>Partner Companies</h2>
 <ul>
-  {% for company in copmanys %}
+  {% for company in companies %}
   <li>
     <a href="{% url 'company_detail' pk=company.pk %}">
       {{ company.name }}

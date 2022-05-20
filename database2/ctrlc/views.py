@@ -26,8 +26,18 @@ def device_detail(request, pk):
     return render(request, 'ctrlc/device_detail.html', {'device': device})
 
 def company_detail(request, pk):
-    company = Company.objects.all(id=pk)
+    company = Company.objects.get(id=pk)
     return render(request, 'ctrlc/company_detail.html', {'company': company})
+
+def user_create(request):
+    if request.method == 'POST':
+        form = UserForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            return redirect('artist_detail', pk=user.pk)
+    else:
+        form = UserForm()
+    return render(request, 'ctrlc/user_form.html', {'form': form})
 
 def device_create(request):
     if request.method == 'POST':

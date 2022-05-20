@@ -1,7 +1,7 @@
 {% extends 'ctrlc/base.html' %} {% block content %}
 <h2>
     <a href="{% url 'user_detail' pk=user.pk %}">
-        {{ user.username }}
+        {{ user.user_name }}
     </a>
 </h2>
 
@@ -9,11 +9,11 @@
 
 <a href="{% url 'user_delete' pk=user.pk %}">Delete</a>
 
-<h3>Users</h3>
+<h3>Devices</h3>
 <ul>
   {% for device in user.devices.all %}
   <li>
-    <a href="{% url 'device_detail' pk=song.pk %}">
+    <a href="{% url 'device_detail' pk=device.pk %}">
         {{ device.name }}
     </a>
   </li>
