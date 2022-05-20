@@ -37,14 +37,15 @@ def device_create(request):
         form = DeviceForm()
     return render(request, 'ctrlc/device_form.html', {'form': form})
 
-def device_edit(request):
+def device_edit(request, pk):
+    device = Device.objects.get(pk=pk)
     if request.method == 'POST':
-        form = DeviceForm(request.POST)
+        form = DeviceForm(request.POST, instance=device)
         if form.is_valid():
-            song = form.save()
-            return redirect('device_detail', pk=song.pk)
+            device = form.save()
+            return redirect('device_detail', pk=device.pk)
     else:
-        form = DeviceForm()
+        form = DeviceForm(instance=device)
     return render(request, 'ctrlc/device_form.html', {'form': form})
 
 def user_delete(request, pk):
