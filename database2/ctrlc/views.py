@@ -18,14 +18,14 @@ class DeviceList(generics.ListCreateAPIView):
     queryset = Device.objects.all()
     serializer_class = DeviceSerializer
 
-class DeviceList(generics.RetrieveUpdateDestroyAPIView):
+class DeviceDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Device.objects.all()
     serializer_class = DeviceSerializer
 
 class CompanyList(generics.ListCreateAPIView):
-    queryset = Device.objects.all()
+    queryset = Company.objects.all()
     serializer_class = CompanySerializer
-    
+
 # Create your views here.
 def user_list(request):
     users = User.objects.all()

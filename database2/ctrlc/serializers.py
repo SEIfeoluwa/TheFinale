@@ -3,14 +3,14 @@ from .models import User, Device, Company
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     devices = serializers.HyperlinkedRelatedField(
-        view_name='device_detail',
+        view_name='device_details',
         many=True,
         read_only=True
     )
 
     class Meta:
         model = User
-        fields = ('id', 'start_date', 'photo_url', 'address', 'email', 'username', 'last_name', 'first_name',)
+        fields = ('id', 'start_date', 'photo_url', 'address', 'email', 'user_name', 'last_name', 'first_name', 'devices')
 
 class DeviceSerializer(serializers.HyperlinkedModelSerializer):
     user = serializers.HyperlinkedRelatedField(

@@ -13,11 +13,11 @@ import Client from './services/api'
 
 function App() {
   const makeApiCall = async () => {
-    let res = await Client.get('device/')
+    let res = await Client.get('users/')
     console.log(res.data)
     // console.log(res.data.users)
   }
-  makeApiCall();
+  // makeApiCall();
 
   return (
     <div className="App">

@@ -6,7 +6,8 @@ const Learn = () => {
     const [partners, setPartners] = useState([])
 
     const getData = async () => {
-        const res = await Client.get('company/')
+        const res = await Client.get('companies/')
+        console.log(res.data)
         setPartners(res.data)
     }
 
@@ -18,7 +19,7 @@ const Learn = () => {
     return (
         <div className="Learnmore">
             <Sidebar />
-            <div>{partners}</div>
+            <div>{partners.name}</div>
         </div>
     )
 }
