@@ -1,10 +1,7 @@
 {% extends 'cc/base.html' %} {% block content %}
+<h2>{{ device.name }} <a href="{% url 'device_edit' pk=device.pk %}"></a></h2>
+<h3>Company: {{ device.company.name }}</h3>
 
-<ul>
-  {% for user in users %}
-  <li>
-    
-  </li>
-  {% endfor %}
-</ul>
+<a href="{% url 'device_delete' pk=device.pk %}"
+
 {% endblock %}
