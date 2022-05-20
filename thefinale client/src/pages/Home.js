@@ -5,7 +5,10 @@ const Home = () => {
     return (
         <div>
             <div>
-                <Link to=""></Link>
+                <Link to="/devices"><i className="fa-solid fa-laptop-mobile"></i>Your Devices</Link>
+            </div>
+            <div>
+                <Link to=''></Link>
             </div>
         </div>
     )

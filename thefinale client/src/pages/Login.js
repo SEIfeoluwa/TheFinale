@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 const Login = (props) => {
     
-    const handleSubmit = () => {
-        Navigate('/home')
+    const handleSubmit = (e) => {
+        e.preventDefault()
     }
 
     return (
@@ -28,7 +28,7 @@ const Login = (props) => {
                         value='KevinSucks'
                         />
                     </div>
-                    <button className="s-btn1" >Log In</button>
+                    <Link to='/home'><button className="s-btn1" >Log In</button></Link>
                 </form> 
             </div>
         </div>
