@@ -8,7 +8,10 @@ const Home = () => {
                 <Link to="/devices"><i className="fa-solid fa-laptop-mobile"></i>Your Devices</Link>
             </div>
             <div>
-                <Link to=''></Link>
+                <Link to='prof'>Profile</Link>
+            </div>
+            <div>
+                <Link to='learnmore'>Partners</Link>
             </div>
         </div>
     )

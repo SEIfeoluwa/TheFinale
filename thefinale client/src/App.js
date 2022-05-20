@@ -8,12 +8,12 @@ import Register from './pages/Register'
 import YDevices from './pages/YDevices'
 import Learn from './pages/Learn'
 import IPP from './pages/IPP'
-import axios from 'axios'
+import Client from './services/api'
 
 
 function App() {
   const makeApiCall = async () => {
-    let res = await axios.get('http://127.0.0.1:8000/')
+    let res = await Client.get('device/')
     console.log(res.data)
     // console.log(res.data.users)
   }
