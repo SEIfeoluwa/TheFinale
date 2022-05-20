@@ -1,4 +1,4 @@
-import './App.css';
+import './styles/App.css'
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Landing from './pages/Landing'
@@ -6,38 +6,18 @@ import Login from './pages/Login'
 import Profile from './pages/Profile'
 import Register from './pages/Register'
 import YDevices from './pages/YDevices'
-import Sidebar from './components/Sidebar';
 import Learn from './pages/Learn'
 import IPP from './pages/IPP'
-import { CheckSession } from './services/Auth';
-import { useNavigate } from 'react-router-dom';
+import axios from 'axios'
+
 
 function App() {
-  const [authenticated, toggleAuthenticated] = useState(false)
-  const [owner, setOwner] = useState('')
-
-  let navigate = useNavigate()
-
-  const checkToken = async () => {
-    const user = await CheckSession()
-    setOwner(user)
-    toggleAuthenticated(true)
+  const makeApiCall = async () => {
+    let res = await axios.get('http://localhost:8000/')
+    console.log(res)
+    // console.log(res.data.users)
   }
-
-  const handleLogOut = () => {
-    //Reset all auth related state and clear localStorage
-    setOwner(null)
-    toggleAuthenticated(false);
-    localStorage.clear();
-    navigate('/')
-  }
-
-  useEffect(() => {
-    const token = localStorage.getItem('token')
-    if (token) {
-      checkToken()
-    }
-  }, [])
+  makeApiCall();
 
   return (
     <div className="App">
