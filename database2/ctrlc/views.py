@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+
 from .models import Company, User, Device
 from .forms import DeviceForm, UserForm
 
@@ -15,13 +16,14 @@ def company_list(request):
     companies = Company.objects.all()
     return render(request, 'ctrlc/company_list.html', {'companies': companies})
 
+
 def user_detail(request, pk):
     user = User.objects.get(id=pk)
-    return render(request, 'ctrl/user_detail.html', {'user': user})
+    return render(request, 'ctrlc/user_detail.html', {'user': user})
 
 def device_detail(request, pk):
     device = Device.objects.get(id=pk)
-    return render(request, 'ctrl/device_detail.html', {'device': device})
+    return render(request, 'ctrlc/device_detail.html', {'device': device})
 
 def company_detail(request, pk):
     company = Company.objects.all(id=pk)
@@ -36,6 +38,7 @@ def device_create(request):
     else:
         form = DeviceForm()
     return render(request, 'ctrlc/device_form.html', {'form': form})
+
 
 def device_edit(request, pk):
     device = Device.objects.get(pk=pk)
