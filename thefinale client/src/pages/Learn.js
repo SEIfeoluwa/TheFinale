@@ -1,4 +1,6 @@
-
+import { useState, useEffect } from 'react'
+import Client from '../services/api'
+import Sidebar from '../components/Sidebar'
 
 const Learn = () => {
     const [partners, setPartners] = useState([])
@@ -15,7 +17,8 @@ const Learn = () => {
 
     return (
         <div className="Learnmore">
-            {partners}
+            <Sidebar />
+            <div>{partners}</div>
         </div>
     )
 }
