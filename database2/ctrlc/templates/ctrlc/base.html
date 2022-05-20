@@ -1,13 +1,14 @@
 {% load static %}
 <html>
   <head>
-    <title>Tunr</title>
-    <link rel="stylesheet" href="{% static 'css/cc.css' %}" />
+    <title>Ctrlc</title>
+    <link rel="stylesheet" href="{% static 'css/ctrlc.css' %}" />
   </head>
   <body>
-    <h1>Tun.r</h1>
+    <h1>Ctrl center</h1>
     <nav>
-      
+      <a href="/devices">Devices</a>
+      <a href="/">Users</a>
     </nav>
     {% block content %} {% endblock %}
   </body>
