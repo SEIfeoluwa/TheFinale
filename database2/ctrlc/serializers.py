@@ -1,4 +1,3 @@
-from requests import TooManyRedirects
 from rest_framework import serializers
 from .models import User
 
