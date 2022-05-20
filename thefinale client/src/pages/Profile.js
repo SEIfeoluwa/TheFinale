@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Client from '../services/api'
+import Sidebar from '../components/Sidebar'
 
 const Profile = () => {
     const [data, setData] = useState()
@@ -15,7 +16,10 @@ const Profile = () => {
 
     return (
         <div className="landing-container">
-            {data}
+            <Sidebar />
+            <div>
+            {data}    
+            </div>  
         </div>
     )
 }
