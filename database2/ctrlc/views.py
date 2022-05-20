@@ -1,14 +1,14 @@
 from django.shortcuts import render, redirect
 from .serializers import UserSerializer
-from rest_framework import viewsets
+from rest_framework import generics
 
 from .models import Company, User, Device
 from .forms import DeviceForm, UserForm
 
 # Create Api routes
-class Userview(viewsets.ModelViewSet):
-    serializer_class = UserSerializer
+class UserList(generics.ListCreateAPIView):
     queryset = User.objects.all()
+    serializer_class = UserSerializer
 
 # Create your views here.
 def user_list(request):
