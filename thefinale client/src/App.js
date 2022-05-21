@@ -6,6 +6,7 @@ import Login from './pages/Login'
 import Profile from './pages/Profile'
 import Register from './pages/Register'
 import YDevices from './pages/YDevices'
+import DeviceD from './pages/DeviceD'
 import Learn from './pages/Learn'
 import IPP from './pages/IPP'
 import Client from './services/api'
@@ -29,6 +30,7 @@ function App() {
           <Route path="/prof" element={  <Profile /> } />
           <Route path="/register" element={ <Register /> } />
           <Route path="/devices" element={ <YDevices /> } />
+          <Route path="/devices/:id" element={ <DeviceD /> } />
           <Route path="/learnmore" element={ <Learn /> } />
           <Route path="/IPP" element={ <IPP /> } />
         </Routes>
