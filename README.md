@@ -16,7 +16,7 @@ This application called Ctrl Center/CtrlC is an application built for the new ho
 
 ![ERD](https://s8.gifyu.com/images/Screenshot-from-2022-05-05-13-21-32.png)
 
-[Heroku Deployment](https://frozen-river-08743.herokuapp.com/)
+[Heroku Deployment](https://ctrlc-client-deployed.herokuapp.com/)
 or 
 [Alternate Link](https://ctrlc-client.herokuapp.com/)
 ***
